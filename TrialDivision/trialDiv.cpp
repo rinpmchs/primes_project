@@ -2,8 +2,7 @@
 
 namespace TrialDivision {
 
-int divide(TypeU64_t& f, TypeU64_t d, int& i) {
-    i++;
+int divide(Project::LongInteger& f, Project::LongInteger d) {
     int pow = 0;
     while (f % d == 0) {
         f /= d;
@@ -12,24 +11,21 @@ int divide(TypeU64_t& f, TypeU64_t d, int& i) {
     return pow;
 }
 
-// works fine for numbers up to ten or eleven digits --> TypeU32_t is not enough
-std::map<TypeU64_t , int> factorize(const TypeU64_t& n, const TypeU64_t& max) {
-    int i = 0; // number of distinct prime factors
-    TypeU64_t f = n; // still unfactored portion
-    std::map<TypeU64_t , int> factors;
+// works fine for numbers up to ten or eleven digits --> Project::SmallInteger is not enough
+std::map<Project::LongInteger , int> factorize(const Project::LongInteger& n, const Project::LongInteger& max) {
+    Project::LongInteger f = n; // still unfactored portion
+    std::map<Project::LongInteger , int> factors;
 
-    // TRY_2&3
-    for (TypeU64_t d = 2; d <= 3; d++) {
-        if (f % d == 0)
-            factors[d] = divide(f, d, i);
-    }
+    if (f % 2 == 0)
+        factors[2] = divide(f, 2);
+    if (f % 3 == 0)
+        factors[3] = divide(f, 3);
 
-    // TRY_LOOP
-    TypeU64_t d = 5;
+    Project::LongInteger d = 5;
     int add = 2;
     while (d <= max && d * d <= f) {
         if (f % d == 0)
-            factors[d] = divide(f, d, i);
+            factors[d] = divide(f, d);
         d += add;
         add = 6 - add;
     }
@@ -42,7 +38,7 @@ std::map<TypeU64_t , int> factorize(const TypeU64_t& n, const TypeU64_t& max) {
     return factors;
 }
 
-bool is_composite(TypeU64_t n) {
+bool is_composite(Project::SmallUInteger n) {
     int i = 2;
     while (i * i <= n) {
         if (n % i == 0)

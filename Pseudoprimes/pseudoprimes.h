@@ -2,6 +2,6 @@
 
 namespace PseudoPrimes {
 
-bool is_pseudoprime();
+bool is_pseudoprime(Project::SmallInteger n);
 
 }

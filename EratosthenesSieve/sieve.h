@@ -2,10 +2,10 @@
 
 namespace Sieve {
 
-void sieve(const TypeU16_t& j, const TypeU32_t& n, std::vector<TypeU32_t>& a);
+void sieve(Project::SmallInteger j, Project::SmallInteger n, std::vector<Project::SmallInteger>& a);
 
-std::vector<TypeU32_t> generate_primes(TypeU32_t n);
+std::vector<Project::SmallInteger> generate_primes(Project::SmallInteger n);
 
-bool is_prime(const TypeU32_t& n, const std::vector<TypeU32_t>& v);
+bool is_prime(Project::SmallInteger n, const std::vector<Project::SmallInteger>& v);
 
 }

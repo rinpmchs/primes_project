@@ -3,10 +3,10 @@
 
 namespace TrialDivision {
 
-int divide(TypeU64_t& f, TypeU32_t d, int& i);
+int divide(Project::LongInteger& f, Project::LongInteger d);
 
-std::map<TypeU64_t, int> factorize(const TypeU64_t& n, const TypeU64_t& max);
+std::map<Project::LongInteger, int> factorize(const Project::LongInteger& n, const Project::LongInteger& max);
 
-bool is_composite(TypeU64_t n);
+bool is_composite(Project::SmallUInteger n);
 
 }

@@ -3,16 +3,18 @@
 
 namespace Pollard {
 
-TypeInteger pollard_p_minus_1_fact(const TypeInteger& n, const TypeInteger& c, const TypeInteger& max) {
-    TypeInteger m = c;
+Project::LongInteger pollard_p_minus_1_fact(const Project::LongInteger& n,
+                                            const Project::LongInteger& c,
+                                            const Project::LongInteger& max) {
+    Project::LongInteger m = c;
 
     // EXPONENTIATE
-    for (TypeInteger i = 1; i < max; i++) {
+    for (Project::LongInteger i = 1; i < max; i++) {
         // MODEXPO
         m = UsefulAlgorithms::power_mod(m, i , n);
         if (i % 10 == 0) {
             // CHECK_GCD
-            TypeInteger g = boost::math::gcd(m - 1, n);
+            Project::LongInteger g = UsefulAlgorithms::gcd(m - 1, n);
             if (g == n) // we need to change c
                 return 0;
             else if (g > 1) // g is a proper divisor

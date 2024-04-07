@@ -2,6 +2,8 @@
 
 namespace Pollard {
 
-TypeInteger pollard_p_minus_1_fact(const TypeInteger& m, const TypeInteger& c, const TypeInteger& max);
+Project::LongInteger pollard_p_minus_1_fact(const Project::LongInteger& m,
+                                            const Project::LongInteger& c,
+                                            const Project::LongInteger& max);
 
 }

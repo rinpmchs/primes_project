@@ -1,5 +1,3 @@
-#include "../TrialDivision/trialDiv.h"
-
 namespace TrialDivision {
 
 void test_compositeness();

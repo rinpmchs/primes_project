@@ -1,16 +1,23 @@
+#include "../FermatsAlgorithm/fermatsFact.h"
 #include "testFermatsAlgorithm.h"
+#include "../Useful/profiler.h"
+#include <typeinfo>
 
 namespace FermatFact {
 
 void test_factorization() {
-    TypeU64_t n;
+    Project::SmallUInteger n;
     std::cout << "number to check: ";
     std::cin >> n;
-    std::pair<TypeU64_t, TypeU64_t> factors = factorize(n);
+//    assert (typeid(n).name() == Project::SmallUInteger);
+    Profiler::start();
+    std::pair<Project::SmallUInteger, Project::SmallUInteger> factors = factorize(n);
+    Profiler::finish();
     if (factors.second == 1)
         std::cout << "n = " << factors.first << ", prime\n";
     else
         std::cout << "n = " << factors.first << " * " << factors.second << ", composite\n";
+    std::cout << "execution time: " << Profiler::getExecutionTimeDouble() << " ms\n";
 }
 
 }

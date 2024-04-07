@@ -1,9 +1,7 @@
 #include "project.h"
-#include "tests/tests.h"
+#include "Tests/tests.h"
 
 int main()
 {
-//    Project::Impl::
     Tests::run_all_tests();
-    return 0;
 }

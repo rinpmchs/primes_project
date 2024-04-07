@@ -3,8 +3,8 @@
 
 namespace PseudoPrimes {
 
-bool is_pseudoprime() {
-    TypeU32_t n = 341; // n is odd and composite
+bool is_pseudoprime(Project::SmallInteger n) {
+    // check n to be odd and composite
     // наверное, стоит сделать проверку на composite (например, из trial_div), а потом запихнуть их сюда
     if (n % 2 == 1 && UsefulAlgorithms::power_mod(2, n - 1, n) == 1)
         return true;

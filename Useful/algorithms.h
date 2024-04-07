@@ -2,12 +2,20 @@
 
 namespace UsefulAlgorithms {
 
-TypeU16_t power_mod(TypeU16_t a, TypeU16_t b, TypeU16_t m);
+Project::SmallInteger power_mod(Project::SmallInteger base, Project::SmallInteger exp, Project::SmallInteger m);
 
-TypeU32_t power_mod(TypeU32_t a, TypeU32_t b, TypeU32_t n);
+Project::SmallUInteger power_mod(Project::SmallUInteger base, Project::SmallUInteger exp, Project::SmallUInteger m);
 
-TypeU64_t power_mod(TypeU64_t a, TypeU64_t b, TypeU64_t m);
+Project::LongInteger power_mod(const Project::LongInteger& base,
+                               const Project::LongInteger& exp,
+                               const Project::LongInteger& m);
 
-TypeInteger power_mod(TypeInteger a, TypeInteger b, TypeInteger m);
+Project::LongInteger gcd(const Project::LongInteger& num1, const Project::LongInteger& num2);
+
+bool is_composite(Project::SmallInteger n);
+
+bool is_composite(Project::SmallUInteger n);
+
+bool is_composite(const Project::LongInteger& n);
 
 }

@@ -2,49 +2,77 @@
 
 namespace UsefulAlgorithms {
 
-TypeU16_t power_mod(TypeU16_t a, TypeU16_t b, TypeU16_t m) {
-    TypeU16_t n = 1;
-    while (b > 0) {
-        if (b % 2 == 1)
-            n = (n * a) % m;
-        b /= 2;
-        a = (a * a) % m;
+Project::SmallInteger power_mod(Project::SmallInteger base, Project::SmallInteger exp, Project::SmallInteger m) {
+    Project::SmallInteger n = 1;
+    while (exp > 0) {
+        if (exp % 2 == 1)
+            n = (n * base) % m;
+        exp /= 2;
+        base = (base * base) % m;
     }
     return n;
 }
 
-TypeU32_t power_mod(TypeU32_t a, TypeU32_t b, TypeU32_t m) {
-    TypeU32_t n = 1;
-    while (b > 0) {
-        if (b % 2 == 1)
-            n = (n * a) % m;
-        b /= 2;
-        a = (a * a) % m;
+
+Project::SmallUInteger power_mod(Project::SmallUInteger base, Project::SmallUInteger exp, Project::SmallUInteger m) {
+    Project::SmallUInteger n = 1;
+    while (exp > 0) {
+        if (exp % 2 == 1)
+            n = (n * base) % m;
+        exp /= 2;
+        base = (base * base) % m;
     }
     return n;
 }
 
-TypeU64_t power_mod(TypeU64_t a, TypeU64_t b, TypeU64_t m) {
-    TypeU64_t n = 1;
-    while (b > 0) {
-        if (b % 2 == 1)
-            n = (n * a) % m;
-        b /= 2;
-        a = (a * a) % m;
+//12721121657520147247744796431842326146296294180809160027132416389225539366745
+
+Project::LongInteger power_mod(const Project::LongInteger& base,
+                               const Project::LongInteger& exp,
+                               const Project::LongInteger& m) {
+    Project::LongInteger n = 1, b = base, e = exp;
+    while (e > 0) {
+        if (e % 2 == 1)
+            n = (n * b) % m;
+        e /= 2;
+        b = (b * b) % m;
     }
     return n;
 }
 
-TypeInteger power_mod(TypeInteger a, TypeInteger b, TypeInteger m) {
-    TypeInteger n = 1;
-    while (b > 0) {
-        if (b % 2 == 1)
-            n = (n * a) % m;
-        b /= 2;
-        a = (a * a) % m;
-    }
-    return n;
+Project::LongInteger gcd(const Project::LongInteger& num1, const Project::LongInteger& num2) {
+    return boost::math::gcd(num1, num2);
 }
 
-// gcd: boost::math::gcd(a, b);
+
+bool is_composite(Project::SmallInteger n) {
+    Project::SmallInteger d = 2;
+    while (d * d <= n) {
+        if (n % d == 0)
+            return true;
+        d++;
+    }
+    return false; // n is prime or pseudoprime
+}
+
+bool is_composite(Project::SmallUInteger n) {
+    Project::SmallUInteger d = 2;
+    while (d * d <= n) {
+        if (n % d == 0)
+            return true;
+        d++;
+    }
+    return false; // n is prime or pseudoprime
+}
+
+
+bool is_composite(const Project::LongInteger& n) {
+    Project::LongInteger d = 2;
+    while (d * d <= n) {
+        if (n % d == 0)
+            return true;
+        d++;
+    }
+    return false; // n is prime or pseudoprime
+}
 }
