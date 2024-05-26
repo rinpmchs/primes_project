@@ -1,4 +1,4 @@
-namespace TrialDivision {
+namespace Project::TrialDivision {
 
 void test_compositeness();
 

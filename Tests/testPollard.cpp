@@ -1,7 +1,7 @@
 #include "../PollardsAlgorithm/pollardAlg.h"
 #include "testPollard.h"
 
-namespace Pollard {
+namespace Project::Pollard {
 
 void test_pollard_factorization() {
     Project::LongInteger n, c, max, g;

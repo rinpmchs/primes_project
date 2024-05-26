@@ -21,4 +21,5 @@ void test_primality() {
     else
         std::cout << "n is composite";
 }
+
 }

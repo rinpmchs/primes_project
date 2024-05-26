@@ -1,7 +1,7 @@
 #include "../TrialDivision/trialDiv.h"
 #include "testTrialDivision.h"
 
-namespace TrialDivision {
+namespace Project::TrialDivision {
 
 void test_compositeness() {
     Project::SmallUInteger num = 6901760918081918081;
