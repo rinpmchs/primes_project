@@ -1,5 +1,5 @@
 namespace Tests {
 
-void run_all_tests();
+int run_all_tests();
 
 }

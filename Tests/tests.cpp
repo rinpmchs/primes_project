@@ -1,38 +1,20 @@
 #include "tests.h"
-#include "testSieve.h"
-#include "testTrialDivision.h"
-#include "testAlgorithms.h"
-#include "testFermatsAlgorithm.h"
-#include "testPollard.h"
-#include "testMillerRabin.h"
 #include "../Exceptions/except.h"
 #include "../AKSAlgorithm/AKSAlg.h"
+#include <gtest/gtest.h>
 
 using namespace Project;
 
 namespace Tests {
 
-void run_all_tests() {
-//    TrialDivision::test_compositeness();
-
-//    TrialDivision::test_factorization();
-//    TrialDivision::test_time();
-//    Sieve::test_print_primes();
-//    Sieve::test_primality();
-//    Useful::test_power_mod();
-//    FermatFact::test_factorization();
+int run_all_tests() {
     try {
-//        Project::Detail::Testt::test_miller_rabin_primality();
-
-//        FermatFact::test_factorzation();
-//        TrialDivision::test_factorization();
-        Pollard::test_pollard_factorization();
-//        AKS aks;
-//        aks.test_AKS();
-
+        ::testing::InitGoogleTest();
+        return RUN_ALL_TESTS();
     } catch (...) {
-        Except::handleException("Pollard::test_pollard_factorization()");
+        Except::handleException("gtests run failed");
     }
+    return -1;
 }
 
 }
