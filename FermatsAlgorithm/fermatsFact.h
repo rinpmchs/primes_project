@@ -1,7 +1,12 @@
 #include "../project.h"
 
-namespace FermatFact {
+using namespace Project;
 
-std::pair<Project::SmallUInteger, Project::SmallUInteger> factorize(const Project::SmallUInteger& n);
+namespace Detail {
+
+class FermatFact {
+public:
+    std::pair<SmallUInteger, SmallUInteger> factorize(const SmallUInteger& n);
+};
 
 }
