@@ -19,15 +19,38 @@ if(Boost_FOUND)
             FermatsAlgorithm/fermatsFact.cpp
             PollardsAlgorithm/pollardAlg.cpp
             Tests/tests.cpp
-            Tests/testTrialDivision.cpp
-            Tests/testSieve.cpp
-            Tests/testAlgorithms.cpp
-            Tests/testFermatsAlgorithm.cpp
-            Tests/testPollard.cpp
-            Tests/testAKS.cpp
+            Tests/test_sieve.cpp
+            Tests/test_fermatsFact.cpp
+            Tests/test_trialDiv.cpp
+            UseCases/usages.cpp
+            UseCases/useTrialDivision.cpp
+            UseCases/useSieve.cpp
+            UseCases/useAlgorithms.cpp
+            UseCases/useFermat.cpp
+            UseCases/usePollard.cpp
+            UseCases/testAKS.cpp
             Exceptions/except.cpp
             AKSAlgorithm/AKSAlg.cpp
-
+            MillerRabin/MillerRabin.cpp
+            UseCases/useMillerRabin.cpp
     )
     target_link_libraries(main boost::boost)
 endif()
+
+
+#add_test(NAME example_test COMMAND example)
+#
+#find_package(GTest CONFIG REQUIRED)
+
+include(FetchContent)
+FetchContent_Declare(
+        googletest
+        URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+)
+
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+
+target_link_libraries(main GTest::gtest_main)
+include(GoogleTest)
