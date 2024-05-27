@@ -2,10 +2,35 @@
 #include "../Useful/profiler.h"
 #include <gtest/gtest.h>
 #include <vector>
+#include <fstream>
 #include <iostream>
 
 using namespace Useful;
 using namespace Detail;
+
+
+namespace FermatTests {
+
+std::ofstream fermat_test_results("../Tests/Data/fermat_test_results.csv", std::ios::out | std::ios::app);
+
+class FermatTest : public ::testing::Test {
+protected:
+    void SetUp() override {
+        if (!fermat_test_results.is_open()) {
+            std::cerr << "Failed to open test results file" << std::endl;
+        }
+    }
+
+    void TearDown() override {
+        if (fermat_test_results.is_open()) {
+            fermat_test_results.flush();
+        }
+    }
+};
+
+} // namespace FermatTests
+
+using namespace FermatTests;
 
 namespace Tests {
 
@@ -42,20 +67,40 @@ TEST(FermatFact, PrimeNumberTest) {
     FermatFact factorizer;
 
     SmallUInteger p1 = 13;
+    Profiler::start();
     auto factors1 = factorizer.factorize(p1);
-    EXPECT_EQ(factors1.second, 1);
+    Profiler::finish();
+    auto duration = Profiler::getExecutionTimeDouble();
+    bool result = factors1.second == 1;
+    EXPECT_EQ(result, 1);
+    fermat_test_results << "FermatFact, PrimeNumberTest," << p1 << "," << result << "," << duration << "\n";
 
     SmallUInteger p2 = 997;
+    Profiler::start();
     auto factors2 = factorizer.factorize(p2);
-    EXPECT_EQ(factors2.second, 1);
+    Profiler::finish();
+    duration = Profiler::getExecutionTimeDouble();
+    result &= factors2.second == 1;
+    EXPECT_EQ(result, 1);
+    fermat_test_results << "FermatFact, PrimeNumberTest," << p2 << "," << result << "," << duration << "\n";
 
     SmallUInteger p3 = 22741;
+    Profiler::start();
     auto factors3 = factorizer.factorize(p3);
-    EXPECT_EQ(factors3.second, 1);
+    Profiler::finish();
+    duration = Profiler::getExecutionTimeDouble();
+    result &= factors3.second == 1;
+    EXPECT_EQ(result, 1);
+    fermat_test_results << "FermatFact, PrimeNumberTest," << p3 << "," << result << "," << duration << "\n";
 
     SmallUInteger p4 = 82913;
+    Profiler::start();
     auto factors4 = factorizer.factorize(p4);
-    EXPECT_EQ(factors4.second, 1);
+    Profiler::finish();
+    duration = Profiler::getExecutionTimeDouble();
+    result &= factors4.second == 1;
+    EXPECT_EQ(result, 1);
+    fermat_test_results << "FermatFact, PrimeNumberTest," << p4 << "," << result << "," << duration << "\n";
 }
 
 TEST(FermatFact, TimeComplexityTest) {
@@ -66,12 +111,13 @@ TEST(FermatFact, TimeComplexityTest) {
     auto factors = factorizer.factorize(n);
     Profiler::finish();
     auto duration = Profiler::getExecutionTimeDouble();
-    std::cout << "execution time: " << duration << " ms\n";
+    bool result = 1;
+    fermat_test_results << "FermatFact, PrimeNumberTest," << n << "," << result << "," << duration << "\n";
+
     EXPECT_LT(duration, 100.0);
     EXPECT_LT(duration, 50.0);
     EXPECT_LT(duration, 25.0);
     EXPECT_LT(duration, 10.0);
     EXPECT_LT(duration, 1.0);
 }
-
-}
+}  // namespace Tests
