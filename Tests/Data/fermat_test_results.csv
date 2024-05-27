@@ -1,35 +1,130 @@
-FermatFact, PrimeNumberTest,13,1,0.000208
-FermatFact, PrimeNumberTest,997,1,0.002834
-FermatFact, PrimeNumberTest,22741,1,0.058541
-FermatFact, PrimeNumberTest,82913,1,0.2125
-FermatFact, PrimeNumberTest,320239240,1,0.018208
-FermatFact, PrimeNumberTest,13,1,0.000375
-FermatFact, PrimeNumberTest,997,1,0.005208
-FermatFact, PrimeNumberTest,22741,1,0.1085
-FermatFact, PrimeNumberTest,82913,1,0.393125
-FermatFact, PrimeNumberTest,320239240,1,0.03275
-FermatFact, PrimeNumberTest,13,1,0.000208
-FermatFact, PrimeNumberTest,997,1,0.002833
-FermatFact, PrimeNumberTest,22741,1,0.059333
-FermatFact, PrimeNumberTest,82913,1,0.221667
-FermatFact, PrimeNumberTest,320239240,1,0.018917
-FermatFact, PrimeNumberTest,13,1,0.000208
-FermatFact, PrimeNumberTest,997,1,0.002833
-FermatFact, PrimeNumberTest,22741,1,0.058625
-FermatFact, PrimeNumberTest,82913,1,0.216625
-FermatFact, PrimeNumberTest,320239240,1,0.017625
-FermatFact, PrimeNumberTest,13,1,0.000125
-FermatFact, PrimeNumberTest,997,1,0.002834
-FermatFact, PrimeNumberTest,22741,1,0.060208
-FermatFact, PrimeNumberTest,82913,1,0.216125
-FermatFact, PrimeNumberTest,320239240,1,0.01775
-FermatFact, PrimeNumberTest,13,1,0.000208
-FermatFact, PrimeNumberTest,997,1,0.00275
-FermatFact, PrimeNumberTest,22741,1,0.0585
-FermatFact, PrimeNumberTest,82913,1,0.212167
-FermatFact, PrimeNumberTest,320239240,1,0.017791
-FermatFact, PrimeNumberTest,13,1,0.000208
-FermatFact, PrimeNumberTest,997,1,0.002791
-FermatFact, PrimeNumberTest,22741,1,0.058541
-FermatFact, PrimeNumberTest,82913,1,0.214917
-FermatFact, PrimeNumberTest,320239240,1,0.017916
+FermatTest,Factorization,15,1,0.000292
+FermatTest,Factorization,91,1,0.00025
+FermatTest,Factorization,561,1,0.000333
+FermatTest,Factorization,56628,1,0.000291
+FermatTest,Factorization,2975616,1,0.000209
+FermatTest,SmallPrime,13,1,0.000333
+FermatTest,SmallPrime,137,1,0.001083
+FermatTest,SmallPrime,919,1,0.004541
+FermatTest,SmallPrime,2441,1,0.012875
+FermatTest,SmallPrime,7321,1,0.053167
+FermatTest,SmallPrime,19507,1,2.30883
+FermatTest,SmallPrime,56093,1,1.1965
+FermatTest,SmallPrime,56101,1,0.298292
+FermatTest,SmallPrime,88811,1,0.411791
+FermatTest,SmallPrime,94543,1,0.356417
+FermatTest,SmallComposite,143,1,0.000459
+FermatTest,SmallComposite,145,1,0.000375
+FermatTest,SmallComposite,925,1,0.000292
+FermatTest,SmallComposite,2465,1,0.000459
+FermatTest,SmallComposite,7357,1,0.005625
+FermatTest,SmallComposite,19669,1,0.00075
+FermatTest,SmallComposite,56133,1,0.00025
+FermatTest,SmallComposite,56125,1,0.0015
+FermatTest,SmallComposite,88877,1,0.006958
+FermatTest,SmallComposite,94545,1,0.001375
+FermatTest,Duration,320239240,1,0.037125
+FermatTest,Factorization,15,1,0.000167
+FermatTest,Factorization,91,1,0.000166
+FermatTest,Factorization,561,1,0.000208
+FermatTest,Factorization,56628,1,0.000209
+FermatTest,Factorization,2975616,1,0.000125
+FermatTest,SmallPrime,13,1,0.000209
+FermatTest,SmallPrime,137,1,0.000584
+FermatTest,SmallPrime,919,1,0.002583
+FermatTest,SmallPrime,2441,1,0.006459
+FermatTest,SmallPrime,7321,1,0.018916
+FermatTest,SmallPrime,19507,1,0.050084
+FermatTest,SmallPrime,56093,1,0.143666
+FermatTest,SmallPrime,56101,1,0.143708
+FermatTest,SmallPrime,88811,1,0.227542
+FermatTest,SmallPrime,94543,1,0.242584
+FermatTest,SmallComposite,143,1,0.000125
+FermatTest,SmallComposite,145,1,0.000208
+FermatTest,SmallComposite,925,1,0.000167
+FermatTest,SmallComposite,2465,1,0.000292
+FermatTest,SmallComposite,7357,1,0.002958
+FermatTest,SmallComposite,19669,1,0.000333
+FermatTest,SmallComposite,56133,1,0.000166
+FermatTest,SmallComposite,56125,1,0.000791
+FermatTest,SmallComposite,88877,1,0.003708
+FermatTest,SmallComposite,94545,1,0.000708
+FermatTest,Duration,320239240,1,0.017958
+FermatTest,Factorization,15,1,0.000208
+FermatTest,Factorization,91,1,0.000167
+FermatTest,Factorization,561,1,0.00025
+FermatTest,Factorization,56628,1,0.000166
+FermatTest,Factorization,2975616,1,0.000125
+FermatTest,SmallPrime,13,1,0.000208
+FermatTest,SmallPrime,137,1,0.000583
+FermatTest,SmallPrime,919,1,0.002584
+FermatTest,SmallPrime,2441,1,0.006458
+FermatTest,SmallPrime,7321,1,0.018916
+FermatTest,SmallPrime,19507,1,0.050291
+FermatTest,SmallPrime,56093,1,0.143792
+FermatTest,SmallPrime,56101,1,0.143708
+FermatTest,SmallPrime,88811,1,0.23025
+FermatTest,SmallPrime,94543,1,0.242084
+FermatTest,SmallComposite,143,1,0.000209
+FermatTest,SmallComposite,145,1,0.000208
+FermatTest,SmallComposite,925,1,0.000167
+FermatTest,SmallComposite,2465,1,0.000333
+FermatTest,SmallComposite,7357,1,0.002834
+FermatTest,SmallComposite,19669,1,0.000375
+FermatTest,SmallComposite,56133,1,0.000125
+FermatTest,SmallComposite,56125,1,0.000792
+FermatTest,SmallComposite,88877,1,0.003583
+FermatTest,SmallComposite,94545,1,0.000708
+FermatTest,Duration,320239240,1,0.018167
+FermatTest,Factorization,15,1,0.000292
+FermatTest,Factorization,91,1,0.000167
+FermatTest,Factorization,561,1,0.00025
+FermatTest,Factorization,56628,1,0.000167
+FermatTest,Factorization,2975616,1,0.000125
+FermatTest,SmallPrime,13,1,0.000209
+FermatTest,SmallPrime,137,1,0.000583
+FermatTest,SmallPrime,919,1,0.002625
+FermatTest,SmallPrime,2441,1,0.0065
+FermatTest,SmallPrime,7321,1,0.019042
+FermatTest,SmallPrime,19507,1,0.05025
+FermatTest,SmallPrime,56093,1,0.143709
+FermatTest,SmallPrime,56101,1,0.143791
+FermatTest,SmallPrime,88811,1,0.227292
+FermatTest,SmallPrime,94543,1,0.242
+FermatTest,SmallComposite,143,1,0.000208
+FermatTest,SmallComposite,145,1,0.000208
+FermatTest,SmallComposite,925,1,0.000167
+FermatTest,SmallComposite,2465,1,0.000333
+FermatTest,SmallComposite,7357,1,0.002917
+FermatTest,SmallComposite,19669,1,0.000416
+FermatTest,SmallComposite,56133,1,0.000166
+FermatTest,SmallComposite,56125,1,0.00075
+FermatTest,SmallComposite,88877,1,0.003625
+FermatTest,SmallComposite,94545,1,0.000792
+FermatTest,Duration,320239240,1,0.017959
+FermatTest,Factorization,15,1,0.000208
+FermatTest,Factorization,91,1,0.000209
+FermatTest,Factorization,561,1,0.000166
+FermatTest,Factorization,56628,1,0.000167
+FermatTest,Factorization,2975616,1,0.000125
+FermatTest,SmallPrime,13,1,0.000208
+FermatTest,SmallPrime,137,1,0.000583
+FermatTest,SmallPrime,919,1,0.002625
+FermatTest,SmallPrime,2441,1,0.0065
+FermatTest,SmallPrime,7321,1,0.019
+FermatTest,SmallPrime,19507,1,0.050125
+FermatTest,SmallPrime,56093,1,0.143708
+FermatTest,SmallPrime,56101,1,0.143708
+FermatTest,SmallPrime,88811,1,0.227167
+FermatTest,SmallPrime,94543,1,0.241875
+FermatTest,SmallComposite,143,1,0.000209
+FermatTest,SmallComposite,145,1,0.000208
+FermatTest,SmallComposite,925,1,0.000166
+FermatTest,SmallComposite,2465,1,0.000333
+FermatTest,SmallComposite,7357,1,0.002833
+FermatTest,SmallComposite,19669,1,0.000375
+FermatTest,SmallComposite,56133,1,0.000167
+FermatTest,SmallComposite,56125,1,0.000791
+FermatTest,SmallComposite,88877,1,0.0035
+FermatTest,SmallComposite,94545,1,0.000791
+FermatTest,Duration,320239240,1,0.018208

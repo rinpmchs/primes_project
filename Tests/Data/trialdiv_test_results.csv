@@ -1,39 +1,35 @@
-TrialDivisionTest, DivideTest,25,2,0.005166
-TrialDivisionTest, FactorizeTest,100,1,0.011958
-TrialDivisionTest, IsCompositeTest,100068,1,0.000209
-TrialDivisionTest, IsCompositeTest,100069,0,0.00125
-TrialDivisionTest, FactorizePrimeTest,279119,1,0.11625TrialDivisionTest, DivideTest,25,2,0.003916
-TrialDivisionTest, FactorizeTest,100,1,0.006875
-TrialDivisionTest, IsCompositeTest,100068,1,8.3e-05
-TrialDivisionTest, IsCompositeTest,100069,0,0.000667
-TrialDivisionTest, FactorizePrimeTest,279119,1,0.064167
-TrialDivisionTest, FactorizeLargeNumberTest,123456,1,0.008333
-TrialDivisionTest, FactorizeExtraLargeNumberTest,146753698127862376382412536,1,3486.91
-TrialDivisionTest, DivideTest,25,2,0.003792
-TrialDivisionTest, FactorizeTest,100,1,0.007167
-TrialDivisionTest, IsCompositeTest,100068,1,0.000125
-TrialDivisionTest, IsCompositeTest,100069,0,0.000667
-TrialDivisionTest, FactorizePrimeTest,279119,1,0.064584
-TrialDivisionTest, FactorizeLargeNumberTest,123456,1,0.008458
-TrialDivisionTest, FactorizeExtraLargeNumberTest,146753698127862376382412536,1,3275.33
-TrialDivisionTest, DivideTest,25,2,0.004209
-TrialDivisionTest, FactorizeTest,100,1,0.006958
-TrialDivisionTest, IsCompositeTest,100068,1,0.000167
-TrialDivisionTest, IsCompositeTest,100069,0,0.000584
-TrialDivisionTest, FactorizePrimeTest,279119,1,0.121167
-TrialDivisionTest, FactorizeLargeNumberTest,123456,1,0.008834
-TrialDivisionTest, FactorizeExtraLargeNumberTest,146753698127862376382412536,1,2965.56
-TrialDivisionTest, DivideTest,25,2,0.004792
-TrialDivisionTest, FactorizeTest,100,1,0.006916
-TrialDivisionTest, IsCompositeTest,100068,1,0.000416
-TrialDivisionTest, IsCompositeTest,100069,0,0.000667
-TrialDivisionTest, FactorizePrimeTest,279119,1,0.062417
-TrialDivisionTest, FactorizeLargeNumberTest,123456,1,0.008
-TrialDivisionTest, FactorizeExtraLargeNumberTest,146753698127862376382412536,1,2952.88
-TrialDivisionTest, DivideTest,25,2,0.004208
-TrialDivisionTest, FactorizeTest,100,1,0.006834
-TrialDivisionTest, IsCompositeTest,100068,1,0.000334
-TrialDivisionTest, IsCompositeTest,100069,0,0.000666
-TrialDivisionTest, FactorizePrimeTest,279119,1,0.06225
-TrialDivisionTest, FactorizeLargeNumberTest,123456,1,0.008083
-TrialDivisionTest, FactorizeExtraLargeNumberTest,146753698127862376382412536,1,2949.58
+TrialDivisionTest,DivideTest,25,2,0.008125
+TrialDivisionTest,SmallPrime,100069,0,0.001625
+TrialDivisionTest,SmallComposite,100068,1,0.000375
+TrialDivisionTest,Factorization,100,1,0.016333
+TrialDivisionTest,Factorization,279119,1,0.150667
+TrialDivisionTest,Factorization,123456,1,0.019208
+TrialDivisionTest,Factorization,146753698127862376382412536,1,4456.53
+TrialDivisionTest,DivideTest,25,2,0.0055
+TrialDivisionTest,SmallPrime,100069,0,0.000625
+TrialDivisionTest,SmallComposite,100068,1,0.000125
+TrialDivisionTest,Factorization,100,1,0.007625
+TrialDivisionTest,Factorization,279119,1,0.063667
+TrialDivisionTest,Factorization,123456,1,0.007875
+TrialDivisionTest,Factorization,146753698127862376382412536,1,2974.58
+TrialDivisionTest,DivideTest,25,2,0.003209
+TrialDivisionTest,SmallPrime,100069,0,0.00075
+TrialDivisionTest,SmallComposite,100068,1,0.000166
+TrialDivisionTest,Factorization,100,1,0.007042
+TrialDivisionTest,Factorization,279119,1,0.062417
+TrialDivisionTest,Factorization,123456,1,0.007834
+TrialDivisionTest,Factorization,146753698127862376382412536,1,2970.6
+TrialDivisionTest,DivideTest,25,2,0.003583
+TrialDivisionTest,SmallPrime,100069,0,0.000792
+TrialDivisionTest,SmallComposite,100068,1,0.000167
+TrialDivisionTest,Factorization,100,1,0.006917
+TrialDivisionTest,Factorization,279119,1,0.06225
+TrialDivisionTest,Factorization,123456,1,0.007791
+TrialDivisionTest,Factorization,146753698127862376382412536,1,2962.19
+TrialDivisionTest,DivideTest,25,2,0.003833
+TrialDivisionTest,SmallPrime,100069,0,0.000667
+TrialDivisionTest,SmallComposite,100068,1,0.000166
+TrialDivisionTest,Factorization,100,1,0.007458
+TrialDivisionTest,Factorization,279119,1,0.070208
+TrialDivisionTest,Factorization,123456,1,0.007792
+TrialDivisionTest,Factorization,146753698127862376382412536,1,2971.22
