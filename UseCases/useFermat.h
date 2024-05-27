@@ -2,6 +2,6 @@
 
 namespace Use {
 
-void use_fermatsFact();
+void use_fermat_factorization();
 
-}
+}  // namespace Use

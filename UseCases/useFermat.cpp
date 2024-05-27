@@ -3,7 +3,7 @@
 
 namespace Use {
 
-void use_fermatsFact() {
+void use_fermat_factorization() {
     SmallUInteger n;
     std::cout << "number to check: ";
     std::cin >> n;
@@ -20,4 +20,4 @@ void use_fermatsFact() {
     std::cout << "execution time: " << Useful::Profiler::getExecutionTimeDouble() << " ms\n";
 }
 
-}
+} // namespace Use

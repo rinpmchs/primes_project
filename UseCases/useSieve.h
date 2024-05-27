@@ -1,9 +1,9 @@
 //#include <gtest/gtest.h>
 
-namespace Sieve {
+namespace Use {
 
-void test_print_primes();
+void use_sieve_print_primes();
 
-void test_primality();
+void use_sieve_primality();
 
 }

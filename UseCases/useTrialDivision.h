@@ -1,9 +1,6 @@
-namespace TrialDivision {
+namespace Use {
 
-void test_compositeness();
-
-void test_factorization();
-
-void test_time();
+void use_trial_compositeness();
+void use_trial_factorization();
 
 }

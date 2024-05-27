@@ -5,35 +5,28 @@
 #include "useFermat.h"
 #include "usePollard.h"
 #include "useMillerRabin.h"
+#include "useCombinations.h"
 #include "../Exceptions/except.h"
-#include "../AKSAlgorithm/AKSAlg.h"
-
-using namespace Project;
-using namespace Detail;
 
 namespace Use {
 
 void run_all_usages() {
-//    TrialDivision::use_trial_compositeness();
 
-//    TrialDivision::use_fermatsFact();
-//    TrialDivision::test_time();
-//    Sieve::test_print_primes();
-    Sieve::test_primality();
-    use_power_mod();
-    use_fermatsFact();
     try {
-//        Project::Detail::Testt::test_miller_rabin_primality();
-
-//        FermatFact::test_factorzation();
-//        TrialDivision::use_fermatsFact();
-        Pollard::use_pollard_factorization();
-//        AKS aks;
-//        aks.test_AKS();
-
+        use_combination1();
+//        use_combination2();
+//        use_miller_rabin_primality();
+//        use_fermat_factorization();
+//        use_trial_compositeness();
+//        use_trial_factorization();
+//        use_sieve_print_primes();
+//        use_sieve_primality();
+//        use_power_mod();
+//        use_pollard_factorization();
     } catch (...) {
-        Except::handleException("Pollard::use_pollard_factorization()");
+        Except::handleException("use_combination1()");
+//        Except::handleException("use_pollard_factorization()");
     }
 }
 
-}
+}  // namespace Use
