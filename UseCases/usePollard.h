@@ -1,5 +1,3 @@
-namespace Use {
-
+namespace Project::Use {
 void use_pollard_factorization();
-
-}  // namespace Use
+}  // namespace Project::Use

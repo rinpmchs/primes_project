@@ -1,7 +1,7 @@
 #include "useFermat.h"
 #include "../Useful/profiler.h"
 
-namespace Use {
+namespace Project::Use {
 
 void use_fermat_factorization() {
     SmallUInteger n;
@@ -20,4 +20,4 @@ void use_fermat_factorization() {
     std::cout << "execution time: " << Useful::Profiler::getExecutionTimeDouble() << " ms\n";
 }
 
-} // namespace Use
+} // namespace Project::Use

@@ -1,9 +1,7 @@
 #include "../TrialDivision/trialDiv.h"
 #include "useTrialDivision.h"
 
-using namespace Project;
-
-namespace Use {
+namespace Project::Use {
 
 void use_trial_compositeness() {
     SmallUInteger num = 6901760918081918081;
@@ -31,4 +29,4 @@ void use_trial_factorization() {
     std::cout << (--factors.end())->first  << "^" << (--factors.end())->second << '\n';
 }
 
-}  // namespace Use
+}  // namespace Project::Use

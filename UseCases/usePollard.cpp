@@ -1,7 +1,7 @@
 #include "../PollardsAlgorithm/pollardAlg.h"
 #include "usePollard.h"
 
-namespace Use {
+namespace Project::Use {
 
 void use_pollard_factorization() {
     LongInteger n, c, max, g;
@@ -18,4 +18,4 @@ void use_pollard_factorization() {
     }
     std::cout << "n = " << g << " * " << n / g << '\n';
 }
-}  // namespace Use
+}  // namespace Project::Use

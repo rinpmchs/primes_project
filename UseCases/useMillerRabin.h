@@ -1,10 +1,6 @@
-#include "../project.h"
+#include "../integer.h"
 #include "../MillerRabin/MillerRabin.h"
 
-using namespace Detail;
-
-namespace Use {
-
+namespace Project::Use {
 void use_miller_rabin_primality();
-
-}
+}  // namespace Project::Use

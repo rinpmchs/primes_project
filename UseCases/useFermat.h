@@ -1,7 +1,5 @@
 #include "../FermatsAlgorithm/fermatsFact.h"
 
-namespace Use {
-
+namespace Project::Use {
 void use_fermat_factorization();
-
-}  // namespace Use
+}  // namespace Project::Use
