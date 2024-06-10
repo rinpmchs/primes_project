@@ -18,7 +18,6 @@ std::pair<SmallUInteger, SmallUInteger> FermatFact::factorize(const SmallUIntege
         }
     }
 
-//    assert ((u - v) / 2 != 1 && "divisor is not integral");
     return {(u + v - 2) / 2, (u - v) / 2};
 }
 }  // namespace Project::Detail
