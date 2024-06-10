@@ -1,17 +1,17 @@
 #include "MillerRabin.h"
-#include "../Useful/algorithms.h"
+#include "../Utils/algorithms.h"
 
 namespace Project::Detail {
 
 bool MillerRabin::miller_rabin_test(const LongInteger& base, LongInteger odd_m, SmallUInteger exp_t, const LongInteger& number) {
-    LongInteger tmp = Useful::power_mod(base, odd_m, number);
+    LongInteger tmp = Utils::power_mod(base, odd_m, number);
 
     if (tmp == 1 || tmp == number - 1) {
         return true;
     }
 
     for (SmallUInteger j = 0; j < exp_t; ++j) {
-        tmp = Useful::power_mod(tmp, 2, number);
+        tmp = Utils::power_mod(tmp, 2, number);
         if (tmp == 1) {
             return false;
         }
@@ -41,7 +41,7 @@ bool MillerRabin::is_prime(LongInteger& number) {
     const LongInteger to_margin = number - 2;
     assert(from_margin <= to_margin);
 
-    Useful::RandomGenerator rand(from_margin, to_margin);
+    Utils::RandomGenerator rand(from_margin, to_margin);
     const SmallUInteger rounds_count = 40;
 
     for (SmallUInteger i = 0; i < rounds_count; ++i) {
