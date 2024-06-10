@@ -2,7 +2,7 @@
 
 namespace Project::Detail {
 
-void Sieve::sieve(SmallInteger p, SmallInteger n, std::vector<bool>& is_prime) {
+void Sieve::sieve(SmallInteger p, SmallInteger n, std::vector<bool>& is_prime) const {
     SmallInteger mult = 2 * p;
     while (mult <= n) {
         is_prime[mult] = false;
