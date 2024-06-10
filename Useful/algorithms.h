@@ -1,21 +1,30 @@
 #include "../project.h"
+#include <boost/random.hpp>
 
-namespace UsefulAlgorithms {
+namespace Project::Useful {
 
-Project::SmallInteger power_mod(Project::SmallInteger base, Project::SmallInteger exp, Project::SmallInteger m);
+SmallInteger power_mod(SmallInteger base, SmallInteger exp, SmallInteger m);
+SmallUInteger power_mod(SmallUInteger base, SmallUInteger exp, SmallUInteger m);
+LongInteger power_mod(const LongInteger& base, const LongInteger& exp, const LongInteger& m);
+LongInteger gcd(const LongInteger& num1, const LongInteger& num2);
+bool is_composite(SmallInteger n);
+bool is_composite(SmallUInteger n);
+bool is_composite(const LongInteger& n);
 
-Project::SmallUInteger power_mod(Project::SmallUInteger base, Project::SmallUInteger exp, Project::SmallUInteger m);
+class RandomGenerator {
+public:
+    RandomGenerator(const LongInteger& from_margin, const LongInteger& to_margin) {
+        // set range for uniform int distribution - ui
+        this->ui = boost::random::uniform_int_distribution<LongInteger>(from_margin, to_margin);
+    }
 
-Project::LongInteger power_mod(const Project::LongInteger& base,
-                               const Project::LongInteger& exp,
-                               const Project::LongInteger& m);
+    LongInteger generate_number() {
+        return this->ui(this->mt);
+    }
 
-Project::LongInteger gcd(const Project::LongInteger& num1, const Project::LongInteger& num2);
+private:
+    boost::random::mt19937 mt;
+    boost::random::uniform_int_distribution<LongInteger> ui;
+};
 
-bool is_composite(Project::SmallInteger n);
-
-bool is_composite(Project::SmallUInteger n);
-
-bool is_composite(const Project::LongInteger& n);
-
-}
+}  // namespace Project::Useful

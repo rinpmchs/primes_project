@@ -1,5 +1,7 @@
 #include "profiler.h"
 
+namespace Project::Useful {
+
 std::chrono::time_point<std::chrono::high_resolution_clock> Profiler::executionStartTimestamp;
 std::chrono::milliseconds Profiler::totalExecutionTime;
 std::chrono::duration<double, std::milli> Profiler::totalExecTimeDbl;
@@ -23,3 +25,4 @@ std::chrono::milliseconds Profiler::getExecutionTime() {
 double Profiler::getExecutionTimeDouble() {
     return Profiler::totalExecTimeDbl.count();
 }
+}  // namespace Project::Useful
