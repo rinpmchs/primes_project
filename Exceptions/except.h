@@ -1,7 +1,5 @@
-#include "../project.h"
+#include "../integer.h"
 
-namespace Except {
-
+namespace Project::Except {
 void handleException(const std::string& details = "unknown_location");
-
-}
+}  // namespace Project::Except

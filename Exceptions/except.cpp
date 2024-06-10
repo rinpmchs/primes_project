@@ -1,6 +1,6 @@
 #include "except.h"
 
-namespace Except {
+namespace Project::Except {
 void handleException(const std::string& details) {
     try {
         throw; // rethrow to catch our exception
@@ -12,4 +12,4 @@ void handleException(const std::string& details) {
         throw; // pass it to debugger
     }
 }
-}
+}  // namespace Project::Except
