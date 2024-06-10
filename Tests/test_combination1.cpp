@@ -3,6 +3,8 @@
 #include <gtest/gtest.h>
 #include <fstream>
 
+namespace Project::Tests {
+
 namespace Comb1Tests {
 
 std::ofstream comb1_test_results("../Tests/Data/comb1_test_results.csv", std::ios::out | std::ios::app);
@@ -25,11 +27,9 @@ protected:
 };
 }  // namespace Comb1Tests
 
-using namespace Detail;
+
 using namespace Comb1Tests;
 using namespace Useful;
-
-namespace Tests {
 
 TEST_F(Comb1Test, SmallPrime) {
     LongInteger number = 13;
@@ -527,4 +527,4 @@ TEST_F(Comb1Test, ExtraLargeComposite) {
     EXPECT_FALSE(result);
     comb1_test_results << "Comb1Test,ExtraLargeComposite," << number << "," << !result << "," << duration << "\n";
 }
-}  // Tests
+}  // namespace Project::Tests

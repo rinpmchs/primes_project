@@ -3,6 +3,8 @@
 #include <gtest/gtest.h>
 #include <fstream>
 
+namespace Project::Tests {
+
 namespace MillerRabinTests {
 
 std::ofstream mr_test_results("../Tests/Data/mr_test_results.csv", std::ios::out | std::ios::app);
@@ -27,8 +29,6 @@ protected:
 
 using namespace MillerRabinTests;
 using namespace Useful;
-
-namespace Tests {
 
 TEST_F(MillerRabinTest, SmallPrime) {
     LongInteger number = 13;
@@ -526,4 +526,4 @@ TEST_F(MillerRabinTest, ExtraLargeComposite) {
     EXPECT_FALSE(result);
     mr_test_results << "MillerRabinTest,ExtraLargeComposite," << number << "," << !result << "," << duration << "\n";
 }
-}  // Tests
+}  // namespace Project::Tests

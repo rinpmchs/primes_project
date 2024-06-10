@@ -4,8 +4,7 @@
 #include <fstream>
 #include <iostream>
 
-using namespace Detail;
-using namespace Useful;
+namespace Project::Tests {
 
 namespace PollardTests {
 
@@ -25,14 +24,12 @@ protected:
         }
     }
 
-    Pollard pollard;
+    Detail::Pollard pollard;
 };
-
 } // namespace PollardTests
 
 using namespace PollardTests;
-
-namespace Tests {
+using namespace Useful;
 
 TEST_F(PollardTest, Factorization) {
     LongInteger n = 10403; // 10403 = 101 * 103
@@ -104,4 +101,4 @@ TEST_F(PollardTest, Factorization) {
     EXPECT_TRUE(result);
     pollard_test_results << "PollardTest, Factorization," << n << "," << result << "," << duration << "\n";
 }
-}  // namespace Tests
+}  // namespace Project::Tests

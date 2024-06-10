@@ -1,11 +1,8 @@
 #include "tests.h"
 #include "../Exceptions/except.h"
-#include "../AKSAlgorithm/AKSAlg.h"
 #include <gtest/gtest.h>
 
-using namespace Project;
-
-namespace Tests {
+namespace Project::Tests {
 
 int run_all_tests() {
     try {
@@ -16,5 +13,4 @@ int run_all_tests() {
     }
     return -1;
 }
-
-}
+}  // namespace Project::Tests

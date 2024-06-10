@@ -3,6 +3,8 @@
 #include <gtest/gtest.h>
 #include <fstream>
 
+namespace Project::Tests {
+
 namespace Comb2Tests {
 
 std::ofstream comb2_test_results("../Tests/Data/comb2_test_results.csv", std::ios::out | std::ios::app);
@@ -25,11 +27,8 @@ protected:
 };
 }  // namespace Comb2Tests
 
-using namespace Detail;
 using namespace Comb2Tests;
 using namespace Useful;
-
-namespace Tests {
 
 TEST_F(Comb2Test, SmallPrime) {
     LongInteger number = 13;
@@ -477,7 +476,6 @@ TEST_F(Comb2Test, ExtraLargeComposite) {
     comb2_test_results << "Comb2Test,ExtraLargeComposite," << number << "," << !result << "," << duration << "\n";
 
     number = LongInteger("56713727820156410577229101238628035241"); // = 41 * 1383261654150156355542173200942147201
-
     Profiler::start();
     result = comb2.comb2_primality_test(number);
     Profiler::finish();
@@ -486,7 +484,6 @@ TEST_F(Comb2Test, ExtraLargeComposite) {
     comb2_test_results << "Comb2Test,ExtraLargeComposite," << number << "," << !result << "," << duration << "\n";
 
     number = LongInteger("1036080103464110332031031766103033010288951027459"); // = 15973 * 64873589082109382983180527788331
-
     Profiler::start();
     result = comb2.comb2_primality_test(number);
     Profiler::finish();
@@ -527,4 +524,4 @@ TEST_F(Comb2Test, ExtraLargeComposite) {
     EXPECT_FALSE(result);
     comb2_test_results << "Comb2Test,ExtraLargeComposite," << number << "," << !result << "," << duration << "\n";
 }
-}  // Tests
+}  // namespace Project::Tests

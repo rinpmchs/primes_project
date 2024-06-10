@@ -3,6 +3,8 @@
 #include <fstream>
 #include <gtest/gtest.h>
 
+namespace Project::Tests {
+
 namespace SieveTests {
 
 std::ofstream sieve_test_results("../Tests/Data/sieve_test_results.csv", std::ios::out | std::ios::app);
@@ -22,14 +24,10 @@ protected:
     }
     Detail::Sieve sieve;
 };
-
 } // namespace SieveTests
 
-using namespace Detail;
-using namespace Useful;
 using namespace SieveTests;
-
-namespace Tests {
+using namespace Useful;
 
 std::vector<SmallInteger> read_primes(const std::string& filename) {
     std::vector<SmallInteger> primes;
@@ -93,4 +91,4 @@ TEST_F(SieveTest,EdgeCaseTest) {
     EXPECT_EQ(primes.size(), 0);
     sieve_test_results << "SieveTest,EdgeCaseTest," << 1 << "," << 1 << "," << duration << "\n";
 }
-}
+}  // namespace Project::Tests

@@ -33,3 +33,10 @@ TrialDivisionTest,Factorization,100,1,0.007458
 TrialDivisionTest,Factorization,279119,1,0.070208
 TrialDivisionTest,Factorization,123456,1,0.007792
 TrialDivisionTest,Factorization,146753698127862376382412536,1,2971.22
+TrialDivisionTest,DivideTest,25,2,0.011917
+TrialDivisionTest,SmallPrime,100069,0,0.0015
+TrialDivisionTest,SmallComposite,100068,1,0.00025
+TrialDivisionTest,Factorization,100,1,0.013291
+TrialDivisionTest,Factorization,279119,1,0.114333
+TrialDivisionTest,Factorization,123456,1,0.014458
+TrialDivisionTest,Factorization,146753698127862376382412536,1,7639.01

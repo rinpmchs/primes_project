@@ -4,6 +4,8 @@
 #include <map>
 #include <fstream>
 
+namespace Project::Tests {
+
 namespace TrialDivTests {
 
 std::ofstream trialdiv_test_results("../Tests/Data/trialdiv_test_results.csv", std::ios::out | std::ios::app);
@@ -27,8 +29,6 @@ protected:
 
 using namespace TrialDivTests;
 using namespace Useful;
-
-namespace Tests {
 
 TEST_F(TrialDivisionTest, DivideTest) {
     LongInteger number = 100;
@@ -107,4 +107,4 @@ TEST_F(TrialDivisionTest, Factorization) {
     EXPECT_TRUE(result);
     trialdiv_test_results << "TrialDivisionTest,Factorization," << number << "," << result << "," << duration << "\n";
 }
-}  // Tests
+}  // namespace Project::Tests

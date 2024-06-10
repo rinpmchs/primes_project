@@ -4,6 +4,8 @@
 #include <vector>
 #include <fstream>
 
+namespace Project::Tests {
+
 namespace FermatTests {
 
 std::ofstream fermat_test_results("../Tests/Data/fermat_test_results.csv", std::ios::out | std::ios::app);
@@ -21,17 +23,13 @@ protected:
             fermat_test_results.flush();
         }
     }
-    
+
     Detail::FermatFact factorizer;
 };
-
 } // namespace FermatTests
 
 using namespace FermatTests;
 using namespace Useful;
-using namespace Detail;
-
-namespace Tests {
 
 TEST_F(FermatTest, Factorization) {
     SmallUInteger n1 = 15;
@@ -286,4 +284,4 @@ TEST_F(FermatTest, Duration) {
     EXPECT_LT(duration, 10.0);
     EXPECT_LT(duration, 1.0);
 }
-}  // namespace TEST_Fs
+}  // namespace Project::Tests
