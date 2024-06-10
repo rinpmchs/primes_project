@@ -17,7 +17,7 @@ if(Boost_FOUND)
             ${CMAKE_SOURCE_DIR}/TrialDivision
             ${CMAKE_SOURCE_DIR}/Combinations
             ${CMAKE_SOURCE_DIR}/Exceptions
-            ${CMAKE_SOURCE_DIR}/Useful
+            ${CMAKE_SOURCE_DIR}/Utils
             ${CMAKE_SOURCE_DIR}/Tests
             ${CMAKE_SOURCE_DIR}/UseCases
     )
@@ -26,8 +26,8 @@ if(Boost_FOUND)
             main main.cpp
             EratosthenesSieve/sieve.cpp
             TrialDivision/trialDiv.cpp
-            Useful/algorithms.cpp
-            Useful/profiler.cpp
+            Utils/algorithms.cpp
+            Utils/profiler.cpp
             FermatsAlgorithm/fermatsFact.cpp
             PollardsAlgorithm/pollardAlg.cpp
             Tests/tests.cpp
