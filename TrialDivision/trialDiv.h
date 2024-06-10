@@ -1,12 +1,12 @@
-#include "../project.h"
+#include "../integer.h"
 #include <map>
 
-namespace TrialDivision {
+namespace Project::Detail {
 
-int divide(Project::LongInteger& f, Project::LongInteger d);
-
-std::map<Project::LongInteger, int> factorize(const Project::LongInteger& n, const Project::LongInteger& max);
-
-bool is_composite(Project::SmallUInteger n);
-
-}
+class TrialDivision {
+public:
+    int divide(LongInteger& f, LongInteger d);
+    std::map<LongInteger, int> factorize(const LongInteger& n, const LongInteger& max);
+    bool is_composite(SmallUInteger n);
+};
+}  // namespace Project::Detail

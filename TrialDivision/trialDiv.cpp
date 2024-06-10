@@ -1,8 +1,8 @@
 #include "trialDiv.h"
 
-namespace TrialDivision {
+namespace Project::Detail {
 
-int divide(Project::LongInteger& f, Project::LongInteger d) {
+int TrialDivision::divide(LongInteger& f, LongInteger d) {
     int pow = 0;
     while (f % d == 0) {
         f /= d;
@@ -11,17 +11,17 @@ int divide(Project::LongInteger& f, Project::LongInteger d) {
     return pow;
 }
 
-// works fine for numbers up to ten or eleven digits --> Project::SmallInteger is not enough
-std::map<Project::LongInteger , int> factorize(const Project::LongInteger& n, const Project::LongInteger& max) {
-    Project::LongInteger f = n; // still unfactored portion
-    std::map<Project::LongInteger , int> factors;
+// works fine for numbers up to ten or eleven digits --> SmallInteger is not enough
+std::map<LongInteger, int> TrialDivision::factorize(const LongInteger& n, const LongInteger& max) {
+    LongInteger f = n; // still unfactored portion
+    std::map<LongInteger, int> factors;
 
     if (f % 2 == 0)
         factors[2] = divide(f, 2);
     if (f % 3 == 0)
         factors[3] = divide(f, 3);
 
-    Project::LongInteger d = 5;
+    LongInteger d = 5;
     int add = 2;
     while (d <= max && d * d <= f) {
         if (f % d == 0)
@@ -38,7 +38,7 @@ std::map<Project::LongInteger , int> factorize(const Project::LongInteger& n, co
     return factors;
 }
 
-bool is_composite(Project::SmallUInteger n) {
+bool TrialDivision::is_composite(SmallUInteger n) {
     int i = 2;
     while (i * i <= n) {
         if (n % i == 0)
@@ -47,4 +47,4 @@ bool is_composite(Project::SmallUInteger n) {
     }
     return false; // n may be prime or pseudoprime
 }
-}
+}  // namespace Project::Detail
