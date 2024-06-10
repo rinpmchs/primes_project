@@ -1,13 +1,11 @@
-#include "../project.h"
+#include "../integer.h"
 
-using namespace Project;
-
-namespace Sieve {
-
-void sieve(SmallInteger j, SmallInteger n, std::vector<SmallInteger>& a);
-
-std::vector<SmallInteger> generate_primes(SmallInteger n);
-
-bool is_prime(SmallInteger n, const std::vector<SmallInteger>& v);
-
-}  // namespace Sieve
+namespace Project::Detail {
+class Sieve {
+public:
+    std::vector<SmallInteger> generate_primes(SmallInteger n);
+    bool check_primality(SmallInteger n, const std::vector<SmallInteger>& primes);
+private:
+    void sieve(SmallInteger p, SmallInteger n, std::vector<bool>& is_prime);
+};
+}  // namespace Project::Detail

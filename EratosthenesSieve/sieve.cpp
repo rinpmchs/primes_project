@@ -1,17 +1,16 @@
 #include "sieve.h"
 
-namespace Sieve
-{
-void sieve(SmallInteger j, SmallInteger n, std::vector<bool> &is_prime) {
-    SmallInteger t = 2 * j;
-    while (t <= n)
-    {
-        is_prime[t] = false;
-        t += j;
+namespace Project::Detail {
+
+void Sieve::sieve(SmallInteger p, SmallInteger n, std::vector<bool>& is_prime) {
+    SmallInteger mult = 2 * p;
+    while (mult <= n) {
+        is_prime[mult] = false;
+        mult += p;
     }
 }
 
-std::vector<SmallInteger> generate_primes(SmallInteger n) {
+std::vector<SmallInteger> Sieve::generate_primes(SmallInteger n) {
     std::vector<bool> is_prime(n + 1, true);
     std::vector<SmallInteger> primes;
 
@@ -22,7 +21,7 @@ std::vector<SmallInteger> generate_primes(SmallInteger n) {
             sieve(i, n, is_prime);
     }
 
-    for (SmallInteger i = 2; i <= n; ++i) {
+    for (SmallInteger i = 2; i <= n; i++) {
         if (is_prime[i])
             primes.push_back(i);
     }
@@ -30,7 +29,7 @@ std::vector<SmallInteger> generate_primes(SmallInteger n) {
     return primes;
 }
 
-bool is_prime(SmallInteger n, const std::vector<SmallInteger>& primes) {
+bool Sieve::check_primality(SmallInteger n, const std::vector<SmallInteger>& primes) {
     return std::find(primes.begin(), primes.end(), n) != primes.end();
 }
-}
+}  // namespace Project::Detail
