@@ -30,7 +30,6 @@ std::map<LongInteger, int> TrialDivision::factorize(const LongInteger& n, const 
         add = 6 - add;
     }
 
-//    assert(f == n && "n is prime or pseudoprime");
     if (f != 1) {
         factors[f] = 1;
     }
