@@ -1,7 +1,7 @@
 #include "fermatsFact.h"
 
-namespace Detail {
-std::pair<SmallUInteger, SmallUInteger> FermatFact::factorize(const SmallUInteger & n) {
+namespace Project::Detail {
+std::pair<SmallUInteger, SmallUInteger> FermatFact::factorize(const SmallUInteger& n) {
     SmallUInteger sqrt_n = ceil(sqrt(n));
     SmallUInteger u, v;
     u = 2 * sqrt_n + 1;
@@ -21,4 +21,4 @@ std::pair<SmallUInteger, SmallUInteger> FermatFact::factorize(const SmallUIntege
 //    assert ((u - v) / 2 != 1 && "divisor is not integral");
     return {(u + v - 2) / 2, (u - v) / 2};
 }
-}
+}  // namespace Project::Detail
