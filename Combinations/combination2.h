@@ -6,6 +6,6 @@ class Comb2
 {
 public:
     friend class Comb1;
-    bool comb2_primality_test(const LongInteger &number);
+    bool check_primality(const LongInteger &number);
 };
 }  // namespace Project::Detail

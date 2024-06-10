@@ -2,11 +2,11 @@
 #include "../EratosthenesSieve/sieve.h"
 #include "../TrialDivision/trialDiv.h"
 #include "../MillerRabin/MillerRabin.h"
-#include "../Useful/algorithms.h"
+#include "../Utils/algorithms.h"
 
 namespace Project::Detail {
 
-bool Comb1::comb1_primality_test(const LongInteger& number) {
+bool Comb1::check_primality(const LongInteger& number) {
     if (number < 2)
         return false;
 
@@ -44,7 +44,7 @@ bool Comb1::adapt_miller_rabin(const LongInteger& number, SmallInteger rounds_co
     const LongInteger to_margin = number - 2;
     assert(from_margin <= to_margin);
 
-    Useful::RandomGenerator rand(from_margin, to_margin);
+    Utils::RandomGenerator rand(from_margin, to_margin);
 
     for (SmallUInteger i = 0; i < rounds_count; ++i) {
         LongInteger base = rand.generate_number();

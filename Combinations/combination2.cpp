@@ -2,10 +2,10 @@
 #include "combination1.h"
 #include "../EratosthenesSieve/sieve.h"
 #include "../PollardsAlgorithm/pollardAlg.h"
-#include "../Useful/algorithms.h"
+#include "../Utils/algorithms.h"
 
 namespace Project::Detail {
-bool Comb2::comb2_primality_test(const LongInteger& number) {
+bool Comb2::check_primality(const LongInteger& number) {
     if (number < 2)
         return false;
 
