@@ -1,9 +1,9 @@
-#include "project.h"
+#include "integer.h"
 #include "Tests/tests.h"
 #include "UseCases/usages.h"
 
 int main()
 {
-    Tests::run_all_tests();
-//    Use::run_all_usages();
+    Project::Tests::run_all_tests();
+//    Project::Use::run_all_usages();
 }
