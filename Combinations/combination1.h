@@ -1,8 +1,6 @@
-#include "../project.h"
+#include "../integer.h"
 
-using namespace Project;
-
-namespace Detail {
+namespace Project::Detail {
 
 class Comb1
 {
@@ -14,4 +12,4 @@ private:
     bool adapt_trial_division(const LongInteger& number, std::vector<SmallInteger>& primes);
     bool adapt_miller_rabin(const LongInteger& n, SmallInteger rounds_count);
 };
-}  // namespace Detail
+}  // namespace Project::Detail

@@ -4,13 +4,13 @@
 #include "../PollardsAlgorithm/pollardAlg.h"
 #include "../Useful/algorithms.h"
 
-namespace Detail {
+namespace Project::Detail {
 bool Comb2::comb2_primality_test(const LongInteger& number) {
     if (number < 2)
         return false;
 
     Sieve sieve;
-    SmallInteger limit = 100;
+    SmallInteger limit = 1000;
     auto small_primes = sieve.generate_primes(limit);
 
     Comb1 comb1;
@@ -28,4 +28,4 @@ bool Comb2::comb2_primality_test(const LongInteger& number) {
     }
     return true;
 }
-}  // namespace Detail
+}  // namespace Project::Detail

@@ -4,7 +4,7 @@
 #include "../MillerRabin/MillerRabin.h"
 #include "../Useful/algorithms.h"
 
-namespace Detail {
+namespace Project::Detail {
 
 bool Comb1::comb1_primality_test(const LongInteger& number) {
     if (number < 2)
@@ -54,4 +54,4 @@ bool Comb1::adapt_miller_rabin(const LongInteger& number, SmallInteger rounds_co
     }
     return true;
 }
-} // namespace Detail
+} // namespace Project::Detail
