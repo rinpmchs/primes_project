@@ -1,10 +1,13 @@
 #include <gtest/gtest.h>
 #include "../TrialDivision/trialDiv.h"
-#include "../Useful/profiler.h"
+#include "../Utils/profiler.h"
 #include <map>
 #include <fstream>
 
 namespace Project::Tests {
+
+using namespace Detail;
+using namespace Utils;
 
 namespace TrialDivTests {
 
@@ -23,19 +26,19 @@ protected:
             trialdiv_test_results.flush();
         }
     }
-    Detail::TrialDivision trialDivision;
+    TrialDivision trialDivision;
+    Profiler profiler;
 };
 } // namespace TrialDivTests
 
 using namespace TrialDivTests;
-using namespace Useful;
 
 TEST_F(TrialDivisionTest, DivideTest) {
     LongInteger number = 100;
-    Profiler::start();
+    profiler.start();
     int result = trialDivision.divide(number, 2);
-    Profiler::finish();
-    auto duration = Profiler::getExecutionTimeDouble();
+    profiler.finish();
+    auto duration = profiler.getExecutionTimeDouble();
     EXPECT_EQ(result, 2);
     EXPECT_EQ(number, 25);
     trialdiv_test_results << "TrialDivisionTest,DivideTest," << number << "," << result << "," << duration << "\n";
@@ -43,20 +46,20 @@ TEST_F(TrialDivisionTest, DivideTest) {
 
 TEST_F(TrialDivisionTest, SmallPrime) {
     SmallUInteger number = 100069;
-    Profiler::start();
+    profiler.start();
     bool result = trialDivision.is_composite(number);
-    Profiler::finish();
-    auto duration = Profiler::getExecutionTimeDouble();
+    profiler.finish();
+    auto duration = profiler.getExecutionTimeDouble();
     EXPECT_FALSE(result);
     trialdiv_test_results << "TrialDivisionTest,SmallPrime," << number << "," << result << "," << duration << "\n";
 }
 
 TEST_F(TrialDivisionTest, SmallComposite) {
     SmallUInteger number = 100068;
-    Profiler::start();
+    profiler.start();
     bool result = trialDivision.is_composite(number);
-    Profiler::finish();
-    auto duration = Profiler::getExecutionTimeDouble();
+    profiler.finish();
+    auto duration = profiler.getExecutionTimeDouble();
     EXPECT_TRUE(result);
     trialdiv_test_results << "TrialDivisionTest,SmallComposite," << number << "," << result << "," << duration << "\n";
 }
@@ -66,10 +69,10 @@ TEST_F(TrialDivisionTest, Factorization) {
     LongInteger number = 100;
     LongInteger max = 10;
     std::map<LongInteger, int> expected_factors = {{2, 2}, {5, 2}};
-    Profiler::start();
+    profiler.start();
     std::map<LongInteger, int> factors = trialDivision.factorize(number, max);
-    Profiler::finish();
-    auto duration = Profiler::getExecutionTimeDouble();
+    profiler.finish();
+    auto duration = profiler.getExecutionTimeDouble();
     bool result = factors == expected_factors;
     EXPECT_TRUE(result);
     trialdiv_test_results << "TrialDivisionTest,Factorization," << number << "," << result << "," << duration << "\n";
@@ -77,10 +80,10 @@ TEST_F(TrialDivisionTest, Factorization) {
     number = 279119;
     max = 10000;
     expected_factors = {{279119, 1}};
-    Profiler::start();
+    profiler.start();
     factors = trialDivision.factorize(number, max);
-    Profiler::finish();
-    duration = Profiler::getExecutionTimeDouble();
+    profiler.finish();
+    duration = profiler.getExecutionTimeDouble();
     result = factors == expected_factors;
     EXPECT_TRUE(result);
     trialdiv_test_results << "TrialDivisionTest,Factorization," << number << "," << result << "," << duration << "\n";
@@ -88,10 +91,10 @@ TEST_F(TrialDivisionTest, Factorization) {
     number = 123456;
     max = 1000;
     expected_factors = {{2, 6}, {3, 1}, {643, 1}};
-    Profiler::start();
+    profiler.start();
     factors = trialDivision.factorize(number, max);
-    Profiler::finish();
-    duration = Profiler::getExecutionTimeDouble();
+    profiler.finish();
+    duration = profiler.getExecutionTimeDouble();
     result = factors == expected_factors;
     EXPECT_TRUE(result);
     trialdiv_test_results << "TrialDivisionTest,Factorization," << number << "," << result << "," << duration << "\n";
@@ -99,10 +102,10 @@ TEST_F(TrialDivisionTest, Factorization) {
     number = LongInteger("146753698127862376382412536");
     max = 100000000000000;
     expected_factors = {{2, 3}, {37, 1}, {829, 1}, {25262537, 1}, {23673684195767, 1}};
-    Profiler::start();
+    profiler.start();
     factors = trialDivision.factorize(number, max);
-    Profiler::finish();
-    duration = Profiler::getExecutionTimeDouble();
+    profiler.finish();
+    duration = profiler.getExecutionTimeDouble();
     result = factors == expected_factors;
     EXPECT_TRUE(result);
     trialdiv_test_results << "TrialDivisionTest,Factorization," << number << "," << result << "," << duration << "\n";

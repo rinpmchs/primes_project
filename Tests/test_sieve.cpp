@@ -1,9 +1,12 @@
 #include "../EratosthenesSieve/sieve.h"
-#include "../Useful/profiler.h"
+#include "../Utils/profiler.h"
 #include <fstream>
 #include <gtest/gtest.h>
 
 namespace Project::Tests {
+
+using namespace Detail;
+using namespace Utils;
 
 namespace SieveTests {
 
@@ -22,12 +25,13 @@ protected:
             sieve_test_results.flush();
         }
     }
-    Detail::Sieve sieve;
+    
+    Sieve sieve;
+    Profiler profiler;
 };
 } // namespace SieveTests
 
 using namespace SieveTests;
-using namespace Useful;
 
 std::vector<SmallInteger> read_primes(const std::string& filename) {
     std::vector<SmallInteger> primes;
@@ -48,18 +52,18 @@ TEST_F(SieveTest,GeneratePrimes) {
     std::vector<SmallInteger> expected_1000000 = read_primes("../Tests/Data/primes_1000000.txt");
 
     for (SmallInteger n : list) {
-        Profiler::start();
+        profiler.start();
         std::vector<SmallInteger> primes = sieve.generate_primes(1000000);
         auto primes_30 = sieve.generate_primes(30);
-        Profiler::finish();
-        auto duration = Profiler::getExecutionTimeDouble();
+        profiler.finish();
+        auto duration = profiler.getExecutionTimeDouble();
         bool result = primes_30 == expected_30;
     }
-    Profiler::start();
+    profiler.start();
     std::vector<SmallInteger> primes = sieve.generate_primes(1000000);
     auto primes_30 = sieve.generate_primes(30);
-    Profiler::finish();
-    auto duration = Profiler::getExecutionTimeDouble();
+    profiler.finish();
+    auto duration = profiler.getExecutionTimeDouble();
     bool result = primes_30 == expected_30;
     EXPECT_EQ(primes_30, expected_30);
     sieve_test_results << "SieveTest,GeneratePrimes," << 30 << "," << result << "," << duration << "\n";
@@ -75,19 +79,19 @@ TEST_F(SieveTest,GeneratePrimes) {
 }
 
 TEST_F(SieveTest,Duration) {
-    Profiler::start();
+    profiler.start();
     std::vector<SmallInteger> primes = sieve.generate_primes(1000000);
-    Profiler::finish();
-    auto duration = Profiler::getExecutionTimeDouble();
+    profiler.finish();
+    auto duration = profiler.getExecutionTimeDouble();
     EXPECT_LT(duration, 100.0);
     sieve_test_results << "SieveTest,Duration," << 1000000 << "," << 1 << "," << duration << "\n";
 }
 
 TEST_F(SieveTest,EdgeCaseTest) {
-    Profiler::start();
+    profiler.start();
     std::vector<SmallInteger> primes = sieve.generate_primes(1);
-    Profiler::finish();
-    auto duration = Profiler::getExecutionTimeDouble();
+    profiler.finish();
+    auto duration = profiler.getExecutionTimeDouble();
     EXPECT_EQ(primes.size(), 0);
     sieve_test_results << "SieveTest,EdgeCaseTest," << 1 << "," << 1 << "," << duration << "\n";
 }
