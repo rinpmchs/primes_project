@@ -4,10 +4,11 @@
 namespace Project::Use {
 
 void use_pollard_factorization() {
+    using namespace Detail;
     LongInteger n, c, max, g;
     std::cout << "enter n, c, and max for Pollard's p - 1 factorization: ";
     std::cin >> n >> c >> max;
-    Detail::Pollard pollard;
+    Pollard pollard;
     g = pollard.pollard_p_minus_1_fact(n, c, max);
     while (g == 0)
     {

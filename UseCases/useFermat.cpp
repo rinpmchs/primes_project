@@ -1,23 +1,26 @@
 #include "useFermat.h"
-#include "../Useful/profiler.h"
+#include "../Utils/profiler.h"
 
 namespace Project::Use {
 
 void use_fermat_factorization() {
+    using namespace Detail;
+    using namespace Utils;
     SmallUInteger n;
     std::cout << "number to check: ";
     std::cin >> n;
 
-    Useful::Profiler::start();
-    Detail::FermatFact factorizer;
+    Profiler profiler;
+    profiler.start();
+    FermatFact factorizer;
     std::pair<SmallUInteger, SmallUInteger> factors = factorizer.factorize(n);
-    Useful::Profiler::finish();
+    profiler.finish();
 
     if (factors.second == 1)
         std::cout << "n = " << factors.first << ", prime\n";
     else
         std::cout << "n = " << factors.first << " * " << factors.second << ", composite\n";
-    std::cout << "execution time: " << Useful::Profiler::getExecutionTimeDouble() << " ms\n";
+    std::cout << "execution time: " << profiler.getExecutionTimeDouble() << " ms\n";
 }
 
 } // namespace Project::Use

@@ -9,7 +9,6 @@
 #include "../Exceptions/except.h"
 
 namespace Project::Use {
-
 void run_all_usages() {
 
     try {
@@ -28,5 +27,4 @@ void run_all_usages() {
 //        Except::handleException("use_pollard_factorization()");
     }
 }
-
 }  // namespace Project::Use
